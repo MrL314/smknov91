@@ -8,6 +8,8 @@ last updated: July 26, 2021
 
 
 >>>>> Please read through the entire README before starting! <<<<<
+
+
 If you encounter issues, see if your issue is answered in the FAQ section at the bottom.
 
 Table of Contents:
@@ -19,14 +21,14 @@ Table of Contents:
 
 
 Special Thanks:
-	Sirgren
+  Sirgren
   Dirtbag
-	Catador
-	atomic
-	SmorBjorn
-	R4M0N
-	SMK Workshop community
-	and YOU!
+  Catador
+  atomic
+  SmorBjorn
+  R4M0N
+  SMK Workshop community
+  and YOU!
 
 
 
@@ -63,7 +65,6 @@ Requirements:
    - I have provided a download mirror link below. See "BSNES Notes".
  - (Optional) bsnes-plus SFX-DOS
    - I have provided a download mirror link below. See "BSNES Notes".
-
 
 
 
@@ -404,7 +405,8 @@ Q: I loaded in my data using the L-DISK command. Why is it not showing up in the
 A: The data that gets used comes from SRAM. So, you need to first use L-DISK to load the data,
    and then use S-RAM to save it to SRAM. Then it will show up in the race.
 
-
+Q: How do I download this?
+A: Here's a quick download link. https://github.com/MrL314/smknov91/archive/refs/heads/main.zip
 
 
 
