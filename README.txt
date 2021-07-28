@@ -288,8 +288,8 @@ BATL Mode
 ---------
 
 2 Players on the track to do battle, there is no scoring but you can make the other player spin when you hit them.
-If you select MAN-MAN and any normal race track (not BATTLE-1) it will result in a Vs Mode race
-If you select MAN-MON it will result in a Vs Race with a CPU opponent and the MON effect selected
+If you select MAN-MAN and any normal race track (not BATTLE-1) it will result in a VS-like race, but without the Checkpoint Zones.
+If you select MAN-MON it will result in a VS-like race with a CPU opponent and the MON effect selected
 If you select MAN-MAN, BATTLE-1 and BATTLE (mode) 0 there will be Coins/ Balls on the track to avoid
 If you select MAN-MAN, BATTLE-1 and BATTLE (mode) 1 there you can press the L Button to fire projectiles 
 Use ED2 to place item boxes and save to SRAM to make it a bit more interesting. Use ED3 to Enable Machine gun mode
@@ -300,78 +300,139 @@ ED1 & 2:
 --------
 
 EDITING:
-  D-PAD - Moves the cursor
-  B - Places the object/value
-  Y - Deletes the object/value
-  SELECT - Cycles through the modes
-  R-Trigger - Toggles the save menu
-
-SAVING: 
-  R-Trigger - Toggles the save options
-  D-PAD - Cycles through save/ load options & Select between YES/ NO
-  B - Executes the selected option
-  L/S-DISK - Loads or Save to or from the Disk
-  L/S-SRAM - Loads or Save to or from the SRAM
-  CLEA - Remove all edited data from the course
-
-Note if you edit a level, save to SRAM and exit to the main menu (Y+B+START+SELECT) then race/battle on that course. Then it will use your edited values.
-
-ED1 Edit modes
-  CODE  - Setting the AI Zone type
-  POINT - Setting the AI Targets & Zone speeds
-  SET   - Setting the AI Zone size. Each zone has specific requirements for size placement.
-          Press B over the CODE tile, then move the cursor somewhere else and press B to set the size.
-
-  See this page for the different constraints for setting the different zones:
-  https://tcrf.net/Proto:Super_Mario_Kart/Debugging_Menus#7th_option_.28EDIT1.29:_AI_Zone_and_Target_editor
+  D-PAD     - Moves the cursor
+  SELECT    - Cycles through the AI Zone Editing modes
+  R-Trigger - Opens the Save/Load Menu
 
 
-ED2 Edit mode Overlay editor:
-  Select     - to bring up "Select Yakumono" - item selection menu.
-  Up/Down    - to change item
-  Left/Right - to change item's orientation
+AI Zone Editing modes:
+  CODE - Set the AI Zone type
+            00: Rectangle
+            02: Triangle top-left
+            04: Triangle top-right
+            06: Triangle bottom-right
+            08: Triangle bottom-left
+            0A: Diagonal Line top-right to bottom-left
+            0C: Diagonal Line top-left to bottom-right
+        B - Increase the zone type. After 0C, this will remove the zone.
+        Y - Decrease the zone type. After 00, this will remove the zone.
+  SET  - Set the AI Zone size. 
+        Remove zone   - Press Y on the tile you placed in CODE
+        Set zone size - Press B on the tile you placed in CODE (this is your Start_X and Start_Y), then 
+                        press B on another part of the map. (this is your Final_X and Final_Y)
+          Each zone has specific requirements for size placement.
+            00: Final_X more right than Start_X, Final_Y lower than Start_Y
+            02: Final_X equal to Start_X, Final_Y lower than Start_Y
+            04: Final_X equal to Start_X, Final_Y lower than Start_Y
+            06: Final_X equal to Start_X, Final_Y higher than Start_Y
+            08: Final_X equal to Start_X, Final_Y higher than Start_Y
+            0A: Final_X more left than Start_X, Final_Y lower than Start_Y
+                  - Distance between Final_X and Start_X must be less than distance 
+                    between Final_Y and Start_Y to work properly
+            0C: Final_X more right than Start_X, Final_Y lower than Start_Y
+                  - Distance between Final_X and Start_X must be less than distance 
+                    between Final_Y and Start_Y to work properly
+  PONT - Setting the AI Targets & Zone speeds. 
+           Zone that the current target is connected to is indicated by P in the menu on the left
+        B - Set the Zone Target. 
+        Y - Delete the Zone Target.
+        X - Cycle through the Zone Speeds (Indicated by S in the menu on the left)
+          Blue   - Speed 1 (Low speed)
+          Green  - Speed 2 (Mid-Low speed)
+          Yellow - Speed 3 (Mid-High speed)
+          Red    - Speed 4 (High speed)
 
-0N (Upward facing)
-0E (Right facing)
-0S (Downward facing)
-0W (Left facing)
 
-NIKO - Used Item box
-QUES - Item/ Question Mark Box
-AROW - Zipper Arrow
-KABE - Multicolored Wall
+Save/Load Menu: 
+  R-Trigger        - Closes the Save/Load Menu
+  L-Trigger        - Cycles through the save slot numbers (0-5)
+  D-PAD Up/Down    - Cycles through Save/Load options
+                     S-DISK - Save data to the Floppy Disk (virtual) via the SFX-DOS
+                     S-RAM  - Save data to SRAM
+                     L-DISK - Load data from the Floppy Disk (virtual) via the SFX-DOS
+                     L-RAM  - Load data from SRAM
+                     CLEA   - Remove edited data from the course
+  D-PAD Left/Right - Select between YES/NO for Save and Load options
+  B                - Executes the selected option
 
 
-ED3:
+Note: When you edit a level, you MUST save to SRAM (by using the S-RAM option) and exit to the main menu (Y+B+START+SELECT). Then when you race/battle on that course, it will use your edited values.
+
+
+
+ED-2
+--------
+
+EDITING:
+  D-PAD     - Moves the cursor
+  B         - Places the object
+  Y         - Deletes the object
+  SELECT    - Opens the "SELECT YAKUMONO" Menu
+  R-Trigger - Opens the Save/Load Menu
+
+Save/Load Menu: 
+  R-Trigger        - Closes the Save/Load Menu
+  L-Trigger        - Cycles through the save slot numbers (0-5)
+  D-PAD Up/Down    - Cycles through Save/Load options
+                     S-DISK - Save data to the Floppy Disk (virtual) via the SFX-DOS
+                     S-RAM  - Save data to SRAM
+                     L-DISK - Load data from the Floppy Disk (virtual) via the SFX-DOS
+                     L-RAM  - Load data from SRAM
+                     CLEA   - Remove edited data from the course
+  D-PAD Left/Right - Select between YES/NO for Save and Load options
+  B                - Executes the selected option
+  
+
+
+SELECT YAKUMONO Menu:
+  SELECT           - Closes the "SELECT YAKUMONO" Menu
+  D-PAD Up/Down    - to select overlay item type
+                       QUES - Item Box
+                       NIKO - Used Item box
+                       AROW - Zipper Arrow
+                       KABE - Multicolored 2x2 Wall
+  D-PAD Left/Right - to select overlay item orientation
+                       0N (Upward facing)
+                       0E (Right facing)
+                       0S (Downward facing)
+                       0W (Left facing)
+
+
+Note: When you edit a level, you MUST save to SRAM (by using the S-RAM option) and exit to the main menu (Y+B+START+SELECT). Then when you race/battle on that course, it will use your edited values.
+
+
+
+
+ED-3:
 ----
 
 Y - Reduce value
 B - Increase value
 
 
-BATTLE - Change to 1 and return to the main menu for machine gun mode in battle mode
+BATTLE OBJ  - If 0, the BATTLE mode will be the coins flying around the field.
+              If 1, the BATTLE mode will be the machine gun mode.
 BOUND POWER - Collision bounce power. It’s a signed number, so anything 80h and above you need to subtract 256 from it.
-MODE7 CHAR - Tile map for the course selected under MAP on the main menu
-COLOR MAP - Palette set for the course selected under MAP on the main menu
-MARIO - Sprite view of the 8 racers with the palette set for the course selected - Most likley this was used to make sure the drivers sprites looked correct for each theme
+MODE7 CHAR  - Tile map for the course selected under MAP on the main menu
+COLOR MAP   - Palette set for the course selected under MAP on the main menu
+MARIO       - Sprite view of the 8 racers with the palette set for the course selected - Most likley this was used to make sure the 
+              drivers sprites looked correct for each theme
 
 
 
 Fun things to try:
 ------------------
-You can drive over water
-With the right MON mode you can visually see the AI targets as you drive around
-Have a battle mode with MAN-MON
-Machine gun battle mode is a thing
-You can use the level editor ED-2 to set item boxes on the course, save it to SRAM and then battle/ race on that track with items
-
+- With MON mode as FR-VIEW, you can see a unique RAM editor, as well as see the AI target coordinates.
+- You can use the level editor ED-1 to create a custom AI pathing for a track, save it to SRAM and then race on that track with that AI setup.
+- You can use the level editor ED-2 to set item boxes on the course, save it to SRAM and then battle/ race on that track with items.
+- You can toggle item debug mode by pressing L+R+X+A
+- You can toggle the mini memory viewer by pressing L+R+Down+SELECT
+- You can toggle the CPU usage viewer by pressing L+R+Up+SELECT while in MON mode
 
 
 Things to be aware of:
 ----------------------
 This is early code, so it is full of bugs, the game can crash easily.
-If the game can't be reset with the button combo Y+B+START+SELECT it has hard crashed and will need to be restarted.
-If things get messed from a freshly booted game, try resetting the SRM file by running reset_sram.bat
 
 
 
@@ -409,6 +470,51 @@ A: See "BSNES Notes" above.
 Q: I loaded in my data using the L-DISK command. Why is it not showing up in the race?
 A: The data that gets used comes from SRAM. So, you need to first use L-DISK to load the data,
    and then use S-RAM to save it to SRAM. Then it will show up in the race.
+
+
+Q: The game freezes when I try to use L-DISK.
+A: Most likely the save data is missing from the floppy disk. If you never saved to the disk using S-DISK
+   for that file, this will happen. You can only load from the disk if there is data for that file already
+   on that disk. You can check if your file was saved by opening the floppy disk created by BSNES-plus SFX_DOS
+   in a hex editor (my personal preference is HxD) and going to around address 2000. The file should be named 
+   in this format: ABBB-CD, where
+        A     - is the editing mode: R for ED-1, Y for ED-2
+        BBB-C - is the track name and number
+          where BBB can be 
+            CIR = CIRCUIT
+            OBA = OBAKE
+            GRA = GRASS
+            CAS = CASTLE
+            ICE = ICE
+            DAR = DART
+            SAN = SAND
+            BTL = BATTLE
+          and C can be a value from 1-4 depending on the track name.
+        D     - is the save slot number, (0-5)
+   For example, the file name "YCAS-32" indicates 
+        A     = Y (ED-2 mode)
+        BBB-C = CAS-3 (CASTLE-3 map)
+        D     = 2 (Save slot 2)
+   and the file name "RCIR-41" indicates 
+        A     = R (ED-1 mode)
+        BBB-C = CIR-4 (CIRCUIT-4 map)
+        D     = 1 (Save slot 1)
+   If the file name does not exist, this will crash the game. 
+   
+   Alternatively, if you have the dos.hex tool working, you may copy the floppy disk files, rename them accordingly, 
+   and then run dos.hex in BSNES-plus SFX-DOS. Input the command "chdisk dd9", press enter, and then input the 
+   command "dir". This will show you a list of the files saved on the disks. If your file is not listed, it doesn't
+   exist, and will crash the game when trying to load it.
+   
+   TL;DR - L-DISK only works if the file exists, which happens after you save it using S-DISK.
+
+
+Q: I messed up my SRAM file, and I want to revert my changes to the original version. How do I do that?
+A: Run the reset_sram.bat file after closing BSNES. This will revert the SRAM to its default.
+
+
+Q: The game won't let me go to the main menu with the button combo Y+B+START+SELECT
+A: The game has likely hard crashed and will need to be restarted manually.
 
 
 Q: How do I download this?
