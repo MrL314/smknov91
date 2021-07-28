@@ -296,7 +296,7 @@ Use ED2 to place item boxes and save to SRAM to make it a bit more interesting. 
 
 
 
-ED1 & 2:
+ED1:
 --------
 
 EDITING:
@@ -417,6 +417,8 @@ MODE7 CHAR  - Tile map for the course selected under MAP on the main menu
 COLOR MAP   - Palette set for the course selected under MAP on the main menu
 MARIO       - Sprite view of the 8 racers with the palette set for the course selected - Most likley this was used to make sure the 
               drivers sprites looked correct for each theme
+
+After you set the values for BATTLE OBJ and BOUND POWER, exit back to the main menu with (Y+B+START+SELECT). This will save your settings.
 
 
 
