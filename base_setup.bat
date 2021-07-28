@@ -30,6 +30,4 @@ copy "TEST.sfc" "Nov91.sfc" >NUL
 
 del "TEST.sfc"
 
-fc /a /b "Nov91.sfc" "Nov91 - base.sfc"
-
 pause

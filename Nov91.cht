@@ -1,6 +1,6 @@
 "disabled","","ENABLE THESE TO RUN ON REGULAR BSNES+"
-"enabled","11fc696b","DISABLE DOS_INI"
-"enabled","0081b340","DISABLE DOS COP VECTOR"
+"disabled","11fc696b","DISABLE DOS_INI"
+"disabled","0081b340","DISABLE DOS COP VECTOR"
 "disabled","",""
 "disabled","",""
 "disabled","","ENABLE THESE TO RUN BASE PATCH ON BSNES+ SFX_DOS"

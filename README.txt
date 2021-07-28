@@ -65,6 +65,8 @@ Requirements:
    - I have provided a download mirror link below. See "BSNES Notes".
  - (Optional) bsnes-plus SFX-DOS
    - I have provided a download mirror link below. See "BSNES Notes".
+     - Please use this version, as it supports the remapping needed to
+       use DOS functions with Super Mario Kart
 
 
 
@@ -320,6 +322,9 @@ ED1 Edit modes
   SET   - Setting the AI Zone size. Each zone has specific requirements for size placement.
           Press B over the CODE tile, then move the cursor somewhere else and press B to set the size.
 
+  See this page for the different constraints for setting the different zones:
+  https://tcrf.net/Proto:Super_Mario_Kart/Debugging_Menus#7th_option_.28EDIT1.29:_AI_Zone_and_Target_editor
+
 
 ED2 Edit mode Overlay editor:
   Select     - to bring up "Select Yakumono" - item selection menu.
@@ -404,6 +409,7 @@ A: See "BSNES Notes" above.
 Q: I loaded in my data using the L-DISK command. Why is it not showing up in the race?
 A: The data that gets used comes from SRAM. So, you need to first use L-DISK to load the data,
    and then use S-RAM to save it to SRAM. Then it will show up in the race.
+
 
 Q: How do I download this?
 A: Here's a quick download link. https://github.com/MrL314/smknov91/archive/refs/heads/main.zip
