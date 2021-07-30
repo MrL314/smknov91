@@ -104,8 +104,8 @@ Downloads and Installs:
 Obtain files:
   !!! By obtaining these files, you do so at your own risk. !!!
 1. Obtain the NEWS_05 folder from the July 24, 2020 gigaleak.
-2. Obtain game.hex from NEWS_05/home/kimura/games/temp, and put in this folder.
-3. Obtain drive-data from NEWS_05/home/kimura/kart/mak, and put in this folder.
+2. Obtain game.hex from NEWS_05/home/kimura/games.lzh/games/temp, and put in this folder.
+3. Obtain drive-data from NEWS_05/home/kimura/kart/mak.lzh/mak, and put in this folder.
 4. Obtain a USA unheadered (512kb) ROM of Super Mario Kart, and put in this folder.
 5. Rename the USA ROM to "Super Mario Kart (USA).sfc" if it is not already named so.
 6. Obtain a dsp1b binary (usually literally called dsp1b.bin), and put in this folder.
