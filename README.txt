@@ -183,7 +183,8 @@ Python Notes:
     - "python3"
     - "py"
     - "py3"
-  If none of those work, you will need to look up what the PATH variable was set to.
+  If none of those work, you will need to look up what the PATH variable was set to. Here's a
+  quick guide on how to set the PATH variable. https://datatofish.com/add-python-to-windows-path/
 
 
 
