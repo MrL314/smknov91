@@ -202,9 +202,9 @@ than it would solve.
 I have made mirror links to the versions of bsnes-plus and bsnes-plus SFX-DOS that I used
 while making this repair. For the most accurate results, please use these versions:
 * bsnes-plus: 
-        https://download1592.mediafire.com/gwscvs01pwzg/twtl3tfa902z9rc/bsnes-plus.zip
+        https://www.mediafire.com/file/twtl3tfa902z9rc/bsnes-plus.zip/file
 * bsnes-plus SFX-DOS: 
-        https://download1338.mediafire.com/mj7pmd8d3yvg/p1qhc7pal9n0zo5/bsnes-plus-v05.79-sfx-dos.zip
+        https://www.mediafire.com/file/p1qhc7pal9n0zo5/bsnes-plus-v05.79-sfx-dos.zip/file
 
 For the most accurate results, I recommend using the accuracy versions. You are free to
 try with other versions of bsnes, but I cannot guarantee that they will work as intended.
